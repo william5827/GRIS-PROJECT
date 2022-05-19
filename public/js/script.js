@@ -11,6 +11,7 @@ var images = [
 function trocaBackground(){
     var i = Math.floor(Math.random() * images.length);
     document.getElementById('body_img').style.backgroundImage = "url("+images[i]+")";
+    
     console.log(images[i]);
 }
 

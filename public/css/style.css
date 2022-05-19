@@ -4,7 +4,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*STYLE INDEX.HTML*/
+/*STYLE LOGIN.HTML*/
 
 .body_img{
     transition: 1s;
@@ -130,5 +130,18 @@ form{
     color: palevioletred;
 }
 
+
+.img_navbar{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    background-image: url(../assets/icons/forest_friend_icon.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 60%;
+    background-color: black;
+    border: 5px solid pink;
+}
 
 /*FIM STYLE INDEX.HTML*/
