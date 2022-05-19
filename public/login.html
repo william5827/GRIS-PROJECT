@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/assets/icons/gris_icon_2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <script src="./js/funcoes.js"></script>
+    <script src="../public/js/script.js"></script>
+    <title>GRIS | LOGIN</title>
+</head>
+<body>
+
+    <div id="body_img" class="body_img"></div>
+    
+    <div class="menu">
+        <div class="menu_content">
+
+            <div class="img_menu">
+                <img src="../public/assets/icons/gris_icon_2.png">
+                <p class="title">Seja bem vindo !</p>
+            </div>
+
+            <form class="form_menu">
+
+                <div class="icons_posic">
+                    <img class="icon_login" src="../public/assets/icons/icon_email.png">
+                    <label>Email</label>
+                    </div>
+               
+            <input class="input_login" id="email_input" type="email" placeholder="Digite seu Email">
+                
+                <div class="icons_posic">
+                <img class="icon_login"  src="../public/assets/icons/icon_password.png">
+                <label>Senha</label>
+                </div>
+
+            <input class="input_login" id="senha_input" type="password" placeholder="Digite sua Senha">
+
+                    <p class="cadastro_p">Não tem login? <a href="./cadastro.html">cadastre-se já!</a></p>
+
+                <button class="button_login" onclick="entrar()">ENTRAR</button>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+
+    function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "../public/imersao_gris/index.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>

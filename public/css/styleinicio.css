@@ -1,0 +1,86 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-image: linear-gradient(to right, pink, rgb(255, 91, 118));
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+.agora{
+    border-bottom: 2px solid white;
+    transition: 1.5s;
+    padding-bottom: 2px;
+}
+
+.img_navbar{
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    background-image: url(../assets/icons/forest_friend_icon.jpg);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 60%;
+    background-color: white;
+}
+
+
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    width: 350px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.banner{
+    background-image: linear-gradient(to right, pink, rgb(255, 91, 118));
+    height: 550px;
+    display: flex;
+}
+
+.banner .container{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    align-items: flex-end;
+}
+
+.banner_content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+
+.banner_content img{
+    width: 500px;
+    height: 400px;
+}
+
+.title_banner{
+    margin: 0;
+    font-size: 100px;
+    color: white;
+}

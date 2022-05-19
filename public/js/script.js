@@ -1,6 +1,6 @@
 var images = [
     '../public/assets/img/bg_GRIS2.jpg',
-    '../public/assets/img/bg_GRIS3.jpg',
+    '../public/assets/img/bg_GRIS12.jpg',
     '../public/assets/img/bg_GRIS4.jpg',
     '../public/assets/img/bg_GRIS5.jpg',
     '../public/assets/img/bg_GRIS6.jpg',
