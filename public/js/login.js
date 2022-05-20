@@ -60,7 +60,7 @@ function validarSessao() {
 
         finalizarAguardar();
     } else {
-        window.location = "login.html";
+        window.location = "inicio.html";
     }
 }
 
@@ -68,5 +68,5 @@ function sair() {
     aguardar();
     sessionStorage.clear();
     finalizarAguardar();
-    window.location = "login.html";
+    window.location = "index.html";
 }

@@ -1,10 +1,10 @@
 var images = [
-    '../public/assets/img/bg_GRIS2.jpg',
-    '../public/assets/img/bg_GRIS12.jpg',
-    '../public/assets/img/bg_GRIS4.jpg',
-    '../public/assets/img/bg_GRIS5.jpg',
-    '../public/assets/img/bg_GRIS6.jpg',
-    '../public/assets/img/bg_GRIS7.png',
+    '../assets/img/bg_GRIS2.jpg',
+    '../assets/img/bg_GRIS12.jpg',
+    '../assets/img/bg_GRIS4.jpg',
+    '../assets/img/bg_GRIS5.jpg',
+    '../assets/img/bg_GRIS6.jpg',
+    '../assets/img/bg_GRIS7.png',
 ];
 
 

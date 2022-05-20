@@ -7,7 +7,7 @@ body{
 /*STYLE LOGIN.HTML*/
 
 .body_img{
-    transition: 1s;
+    transition: 1.5s;
     background-image: url(../assets/img/bg_GRIS2.jpg);
     height: 100vh;
     width: 75%;
