@@ -42,7 +42,16 @@
 
                 <button type="button" class="button_login" onclick="entrar()">ENTRAR</button>
 
+
             </form>
+
+            <div class="card_erro" id="cardErro">
+                <p class="msg_erro" id="mensagem_erro"></p>
+            </div>
+
+            <div class="card_redirecionar" id="cardRedirecionar">
+                <p class="msg_redirecionar" id="mensagem_redirecionar"></p>
+            </div>
 
         </div>
     </div>
@@ -60,9 +69,11 @@
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
-            //cardErro.style.display = "block"
-            //mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = '<img class="icon_status" src="assets/icons/icon_error.png"> Preencha todos os campos';
+            
+            //finalizarAguardar();
+            setInterval(sumirMensagem, 3000)
             return false;
         }
         else {
@@ -95,9 +106,12 @@
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
 
+                    cardRedirecionar.style.display = "block"
+                    mensagem_redirecionar.innerHTML = '<img class="gif_loading" src="assets/icons/loading_login.gif">';
+
                     setTimeout(function () {
                         window.location = "/imersao_gris/inicio.html";
-                    }, 1000); // apenas para exibir o loading
+                    }, 3000); // apenas para exibir o loading
 
                 });
 
@@ -119,7 +133,7 @@
     }
 
     function sumirMensagem() {
-        //cardErro.style.display = "none"
+        cardErro.style.display = "none"
     }
 
 </script>

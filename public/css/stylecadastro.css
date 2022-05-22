@@ -18,7 +18,7 @@ body{
 
 .card_cadastro{
     width: 350px;
-    height: 500px;
+    height: 520px;
     background-color: white;
     border-radius: 3px;
     box-shadow: 0 4px 40px 0 rgb(0, 0, 0, 0.2);
@@ -32,7 +32,7 @@ body{
 }
 
 .cadastro_p{
-    font-size: 25px;
+    font-size: 23px;
     margin: 0;
     margin-top: 10px;
 }
@@ -48,7 +48,7 @@ form{
     width: 100%;
     height: 450px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .icon_login{
@@ -65,7 +65,7 @@ form{
     border-bottom: 1px solid black;
     outline: none;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .input_login::placeholder{
@@ -106,4 +106,79 @@ form{
     background-color: black;
     color: white;
     border: 1px solid black;
+}
+
+.card_erro{
+    width: 270px;
+    height: 35px;
+    background-color: white;
+    border: 0;
+    border-bottom: 2px solid red;
+    align-self: flex-start;
+    margin-top: 16%;
+    display: none;
+    margin-left: 55%;
+    transition: 1.5s;
+    position: fixed;
+}
+
+.msg_erro{
+    font-size: 18px;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg_redirecionar{
+    font-size: 16px;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_redirecionar{
+    width: 450px;
+    height: 40px;
+    background-color: white;
+    border: 0;
+    border-bottom: 2px solid green;
+    align-self: flex-start;
+    margin-top: 16%;
+    display: none;
+    margin-left: 63%;
+    transition: 1.5s;
+    position: fixed;
+}
+
+.icon_status{
+    width: 27px;
+    height: 27px;
+    margin-right: 10px;
+}
+
+.validacao{
+    font-size: 13px;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.valid_span{
+    color: green;
+}
+
+.erro_span{
+    color: red;
+}
+
+.span_senha_media{
+    color: rgb(255, 217, 0);
+}
+
+.gif_loading{
+    width: 35px;
+    height: 35px;
 }

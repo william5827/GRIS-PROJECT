@@ -28,28 +28,32 @@
                 <label>Nome</label>
                 </div>
 
-                <input class="input_login" id="nome_input" type="text" placeholder="Digite seu Nome">
+                <input class="input_login" id="nome_input" type="text" placeholder="Digite seu Nome" onkeyup="validar_login()">
+                <span class="validacao" id="valid_login"></span>
 
                 <div class="icons_posic">
                     <img class="icon_login" src="assets/icons/icon_email.png">
                     <label>Email</label>
                     </div>
                
-                <input class="input_login" id="email_input" type="email" placeholder="Digite seu Email">
-                
+                <input class="input_login" id="email_input" placeholder="Digite seu Email">
+                <span class="validacao" id="valid_email"></span>
+
                 <div class="icons_posic">
                 <img class="icon_login" src="assets/icons/icon_password.png">
                 <label>Senha</label>
                 </div>
 
-                <input class="input_login" id="senha_input" type="password" placeholder="Digite sua Senha">
+                <input class="input_login" id="senha_input" type="password" placeholder="Digite sua Senha" onkeyup="validar_senha()">
+                <span class="validacao" id="valid_senha"></span>
 
                 <div class="icons_posic">
                     <img class="icon_login" src="assets/icons/icon_password.png">
                     <label>Confirme sua senha</label>
                     </div>
 
-                <input class="input_login" id="confirmacao_senha_input" type="password" placeholder="Confirme sua Senha">
+                <input class="input_login" id="confirmacao_senha_input" type="password" placeholder="Confirme sua Senha" onkeyup="confirm_senha()">
+                <span class="validacao" id="valid_confirmsenha"></span>
 
                 <button type="button" class="button_login" onclick="cadastrar()">CADASTRAR</button>
 
@@ -57,13 +61,68 @@
 
         </div>
 
+        <div class="card_erro" id="cardErro">
+            <p class="msg_erro" id="mensagem_erro"></p>
+        </div>
+
+        <div class="card_redirecionar" id="cardRedirecionar">
+            <p class="msg_redirecionar" id="mensagem_redirecionar"></p>
+        </div>
+
     </div>
+
 
 </body>
 
 </html>
 
 <script>
+
+    function confirm_senha(){
+
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        if(senhaVar != confirmacaoSenhaVar){
+            valid_confirmsenha.innerHTML = '<span class="erro_span">As senhas inseridas devem ser iguais</span>'
+        } else {
+            valid_confirmsenha.innerHTML = '<span class="valid_span">Confirmação valida</span>'
+        } 
+
+    }
+
+    function validar_senha(){
+
+        var senhaVar = senha_input.value;
+
+        if(senhaVar.length > 0 && senhaVar.length <= 3){
+            valid_senha.innerHTML = 'Sua senha está: <span class="erro_span">Fraca</span>'
+        } else if(senhaVar.length > 3 && senhaVar.length <= 6){
+            valid_senha.innerHTML = 'Sua senha está: <span class="span_senha_media">Média</span>'
+        } else if(senhaVar.length > 6){
+            valid_senha.innerHTML = 'Sua senha está: <span class="valid_span">Forte</span>'
+        } else{
+            valid_senha.innerHTML = ''
+        }
+
+    }
+
+
+    function validar_login(){
+
+        var nomeVar = nome_input.value; 
+
+        if(nomeVar.length >= 3){
+            valid_login.innerHTML = '<span class="valid_span">Nome valido</span>'
+        } else if(nomeVar.length > 0 && nomeVar.length < 3){
+            valid_login.innerHTML = '<span class="erro_span">Nome invalido</span>'
+        } else{
+            valid_login.innerHTML = ''
+            }
+
+        }
+
+
     function cadastrar() {
         //aguardar();
 
@@ -75,15 +134,15 @@
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            //cardErro.style.display = "block"
-            //mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            alert('ta errado')
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = '<img class="icon_status" src="assets/icons/icon_error.png"> Preencha todos os campos';
 
-            finalizarAguardar();
+            //finalizarAguardar();
+            setInterval(sumirMensagem, 6000)
             return false;
         }
         else {
-            setInterval(sumirMensagem, 5000)
+            setInterval(sumirMensagem, 2000)
         }
 
         // Enviando o valor da nova input
@@ -104,13 +163,13 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                //cardErro.style.display = "block";
-                alert('cadastrou')
-                //mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                cardRedirecionar.style.display = "block";
+                mensagem_redirecionar.innerHTML = '<img class="icon_status" src="assets/icons/icon_ok.png"> Cadastro realizado com sucesso! redirecionando..  <img class="gif_loading" src="assets/icons/loading.gif">';
 
                 setTimeout(() => {
                     window.location = "index.html";
-                }, "1000")
+                }, "4000")
                 
                 limparFormulario();
                 finalizarAguardar();
@@ -126,8 +185,8 @@
     }
 
     function sumirMensagem() {
-        //cardErro.style.display = "none"
-        //alert('sumir mensagem')
+        cardErro.style.display = "none"
+        //cardRedirecionar.style.display = "none"
     }
 
 </script>
