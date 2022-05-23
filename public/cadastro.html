@@ -83,9 +83,11 @@
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if(senhaVar != confirmacaoSenhaVar){
+        if(confirmacaoSenhaVar == "" ){
+            valid_confirmsenha.innerHTML = '<span class="erro_span">Digite sua senha</span>'
+        } else if(senhaVar != confirmacaoSenhaVar){
             valid_confirmsenha.innerHTML = '<span class="erro_span">As senhas inseridas devem ser iguais</span>'
-        } else {
+        } else{
             valid_confirmsenha.innerHTML = '<span class="valid_span">Confirmação valida</span>'
         } 
 
