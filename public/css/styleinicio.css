@@ -35,7 +35,7 @@ body{
     width: 45px;
     height: 45px;
     margin: 0;
-    background-image: url(../assets/icons/forest_friend_icon.jpg);
+    background-image: url(../assets/img/bg_gris_content2.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 60%;
@@ -47,7 +47,7 @@ body{
     width: 80px;
     height: 80px;
     margin: 0;
-    background-image: url(../assets/icons/forest_friend_icon.jpg);
+    background-image: url(../assets/img/bg_gris_content2.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 60%;
@@ -101,8 +101,8 @@ body{
 .footer_index{
     height: 150px;
     background-image: linear-gradient(to right, pink, rgb(255, 91, 118));
-    display: flex;
     justify-content: center;
+    display:flex;
 }
 
 
@@ -142,4 +142,68 @@ body{
     width: 25px;
     height: 25px;
     padding-top: 5px;
+}
+
+
+.footer{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.conteudo_gris{
+    margin-top: 4%;
+    /*background-color: black;*/
+    height: 400px;
+}
+
+.conteudo_gris .container{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.text_content {
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 75%;
+    height: 100%;
+    /*border: 2px solid rgb(255, 91, 118);*/
+}
+
+.img_content {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 0;
+    background-image: linear-gradient(to right, pink, rgb(255, 91, 118));
+    width: 25%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../assets/icons/forest_friend_icon.jpg);
+}
+
+
+body::-webkit-scrollbar{
+    width: 12px;
+    background-color:rgb(255, 91, 118);
+}
+
+body::-webkit-scrollbar-thumb{
+    border: 3px solid rgb(255, 91, 118);
+    background-color: pink;
+    border-radius: 5px;
+}
+
+.title_text{
+    text-align: center;
+    font-size: 45px;
+    color: rgb(255, 91, 118);
+}
+
+.title_text p{
+    margin: 0;
 }

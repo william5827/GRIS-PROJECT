@@ -125,12 +125,12 @@ form{
     width: 200px;
     height: 200px;
     margin: 0;
-    background-image: url(../assets/icons/forest_friend_icon.jpg);
+    background-image: url(../assets/img/bg_gris_content2.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 60%;
-    background-color: black;
-    border: 4px solid pink;
+    /*background-color: black;*/
+    border: 3px solid pink;
 }
 
 .card_erro{
