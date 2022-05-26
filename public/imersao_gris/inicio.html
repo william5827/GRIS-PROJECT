@@ -6,6 +6,9 @@
     <link rel="shortcut icon" href="../assets/icons/gris_icon_2.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styleinicio.css">
     <script src="../js/funcoes.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRIS | INICIO</title>
 </head>
@@ -14,16 +17,21 @@
     <div class="header">
 
         <div class="container">
-            <div class="img_navbar"></div>
+
+            <div class="title_user">
+            <div class="img_navbar"> </div>
+            <p>Olá, <span id="b_usuario"><b>usuario</b></span></p>
+            </div>
 
         <ul class="navbar">
-            <!--<li>Olá <span id="b_usuario">usuario</span></li>-->
-            <li class="agora">INICIO</li>
-            <li><a class="a_navbar" href="">SOUNDTRACK</a></li>
-            <li><a class="a_navbar" href="">MURAL</a></li>
-            <li><a class="a_navbar" href="">GRAPHICS</a></li>
+            <li class="agora"> <img class="icons_navbar" src="../assets/icons/icon_home.png"></li>
+            <li><a class="a_navbar" href=""> <img class="icons_navbar" src="../assets/icons/icon_soundtrack.png"></a></li>
+            <li><a class="a_navbar" href=""> <img class="icons_navbar" src="../assets/icons/icon_mural.png"></a></li>
+            <li><a class="a_navbar" href=""> <img class="icons_navbar" src="../assets/icons/icon_dashboard.png"></a></li>
         </ul>
-            <a href="../index.html"><img class="icon_logout_navbar" src="../assets/icons/icon_logout.png"></a>
+        <div class="help_logout">
+            <button><img class="icon_logout_navbar" src="../assets/icons/icon_logout.png"></button>
+        </div>
         </div>
 
     </div>
@@ -35,17 +43,58 @@
             <img src="../assets/img/bg_gris_banner.png">
             <p class="title_banner">G R I S</p>
             </div>
-
         </div>
 
     </div>
 
+    <div class="cliq_here">
+        <button onclick="help()"><img class="icon_help_navbar" src="../assets/icons/icon_help.png"></button>
+        <p>Clique aqui</p>
+    </div>
+
+    <div class="inicio_content" id="inicio_content">
+
+        <div class="container">
+
+    <div class="div_help" id="div_help">
+        <div class="title_menu_help">
+            <p>ICONES DO MENU</p>
+        </div>
+        <div class="help_item">
+            <img class="icons_help" src="../assets/icons/icon_home.png">
+            <p>Tela inicial</p>
+        </div>
+        <div class="help_item">
+            <img class="icons_help" src="../assets/icons/icon_soundtrack2.png">
+            <p>Trilha sonora</p>
+        </div>
+        <div class="help_item">
+            <img class="icons_help" src="../assets/icons/icon_mural2.png">
+            <p>Postagens</p>
+        </div>
+        <div class="help_item">
+            <img class="icons_help" src="../assets/icons/icon_dashboard_2.png">
+            <p>Gráficos</p>
+        </div>
+        <div class="help_item">
+            <img class="icons_help" src="../assets/icons/icon_logout2.png">
+            <p>Sair</p>
+        </div>
+    </div>
+
+    <div class="div_home">
+    
+    </div>
+
+    </div>
+
+    </div>
 
     <div class="conteudo_gris">
         <div class="container">
             <div class="text_content">
                 <div class="title_text"> <p> GRIS </p> </div>
-                <div class="text_t1"><i>" Game desenvolvido pelo Nomada Studio
+                <div class="text_t1"><i><b>" Game desenvolvido pelo Nomada Studio
                     e distribuído pela Devolver Digital.
                     Gris é a protagonista e está presa em um mundo de tristeza,
                     onde se vê fraca e desnorteada e precisa
@@ -54,14 +103,28 @@
                     ela certamente seria "sutileza", já que seu grande
                     triunfo é justamente abordar temáticas como a depressão,
                     o luto e a dor nos detalhes. O jogo mostra e te faz sentir
-                    todos esses tópicos por meio da arte onde você vai juntando as peças
-                    e interpretando a jornada por si mesmo. "</i></div>
+                    todos esses tópicos por meio da arte, onde você vai juntando as peças
+                    e interpretando a jornada por si mesmo. "</b></i></div>
             </div>
             <div class="img_content"></div>
         </div>
     </div>
 
 
+    <div class="conteudo_gris">
+        <div class="container">
+            <div class="img_content2"></div>
+            <div class="text_content">
+                <div class="title_text"> <p> PORQUE GRIS ? </p> </div>
+                <div class="text_t1"><i><b> " Pra mim, Gris é muito mais que um jogo,
+                    é uma experiência, uma história que começa com uma garota
+                    lutando contra a depressão e a sua jornada para supera-lá, a maneira
+                    como o jogo aborda esse tema é muito intensa e te faz sentir a dor
+                    e a tristeza da personagem do inicio ao fim, sem uma única fala ou diálogo 
+                    na história, os cenários e a trilha sonora trazem uma profundidade inexplicável "</b></i></div>
+            </div>
+        </div>
+    </div>
 
 
     <!--<div class="footer_index">
@@ -94,3 +157,15 @@
 
 </body>
 </html>
+
+<script>
+
+    function help(){
+
+        inicio_content.style.display = "flex"
+
+    }
+
+
+
+</script>
