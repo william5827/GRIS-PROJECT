@@ -6,7 +6,6 @@
     <link rel="shortcut icon" href="../assets/icons/gris_icon_2.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styleinicio.css">
     <script src="../js/funcoes.js"></script>
-    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +57,7 @@
 
     <div class="div_help" id="div_help">
         <div class="title_menu_help">
-            <p>ICONES DO MENU</p>
+            <p><b>ICONES DO MENU</b></p>
         </div>
         <div class="help_item">
             <img class="icons_help" src="../assets/icons/icon_home.png">
@@ -83,7 +82,14 @@
     </div>
 
     <div class="div_home">
-    
+        <div class="hom_img"></div>
+    <div class="title_home">
+        <p>Seja bem vindo</p>
+    </div>
+    <div class="hom2_img"><button onclick="fechar_help()"><img src="../assets/icons/icon_fechar.png"></button></div>
+
+    <div class="text_content_hom"></div>
+
     </div>
 
     </div>
@@ -163,6 +169,12 @@
     function help(){
 
         inicio_content.style.display = "flex"
+
+    }
+
+    function fechar_help(){
+
+        inicio_content.style.display = "none"
 
     }
 
