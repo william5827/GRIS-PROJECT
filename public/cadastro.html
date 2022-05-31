@@ -139,7 +139,7 @@
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = '<img class="icon_status" src="assets/icons/icon_error.png"> Preencha todos os campos';
+            mensagem_erro.innerHTML = '<img class="icon_status" src="assets/icons/icon_error.png"><b>Preencha todos os campos<b>';
 
             //finalizarAguardar();
             setInterval(sumirMensagem, 6000)
@@ -169,7 +169,7 @@
             if (resposta.ok) {
 
                 cardRedirecionar.style.display = "block";
-                mensagem_redirecionar.innerHTML = '<img class="icon_status" src="assets/icons/icon_ok.png"> Cadastro realizado com sucesso! redirecionando..   <img class="gif_loading" src="assets/icons/loading.gif">';
+                mensagem_redirecionar.innerHTML = '<img class="icon_status" src="assets/icons/icon_ok.png">Cadastro realizado com sucesso! redirecionando.. <img class="gif_loading" src="assets/icons/loading.gif">';
 
                 setTimeout(() => {
                     window.location = "index.html";
