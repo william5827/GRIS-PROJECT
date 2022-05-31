@@ -39,7 +39,7 @@ body{
 .title_user{
     float: left;
     display: flex;
-    width: 150px;
+    width: 155px;
     align-items: center;
     justify-content: space-between;
 }
@@ -513,4 +513,94 @@ body::-webkit-scrollbar-thumb{
     height: 80%;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+
+.content_me{
+    height: 400px;
+    margin-top: 5%;
+}
+
+.content_me .container{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.content_contact{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image_contact{
+    width: 250px;
+    height: 250px;
+    background-image: url(../assets/img/eu_img.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    display: flex;
+}
+
+.title_contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title_contact p{
+    margin: 0;
+    font-size: 45px;
+    color: #ff5b76;
+}
+
+.text_contact{
+    width: 60%;
+    height: 250px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title_rs{
+    display: flex;
+    justify-content: center;
+}
+
+.title_rs p {
+    font-size: 25px;
+    color: #ff5b76;
+}
+
+.contact_all{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.web_icons{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 200px;
+}
+
+.web_icons img{
+    width: 40px;
+    height: 40px;
 }
