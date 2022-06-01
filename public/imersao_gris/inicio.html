@@ -69,11 +69,11 @@
         </div>
         <div class="help_item">
             <img class="icons_help" src="../assets/icons/icon_mural2.png">
-            <p>Postagens</p>
+            <p>Mural</p>
         </div>
         <div class="help_item">
             <img class="icons_help" src="../assets/icons/icon_dashboard_2.png">
-            <p>Gráficos</p>
+            <p>Dashboard</p>
         </div>
         <div class="help_item">
             <img class="icons_help" src="../assets/icons/icon_logout2.png">
@@ -86,7 +86,7 @@
     <div class="title_home">
         <div class="title"><p>Seja bem vindo</p></div>
         <div class="text_hom">" Olá, eu sou o William e esse é o meu projeto individual.
-            Nesse site deixo todos os meus sentimentos e acredito ter dado tanta profundindade
+            Nesse site deixo todos os meus sentimentos e acredito ter dado tanta profundidade
             quanto esperava. Espero que se divirta navegando por aqui do mesmo jeito que me
             diverti criando tudo isso. "
         </div>
@@ -143,8 +143,10 @@
             <div class="text_content">
                 <div class="title_text"> <p> UM POUCO DOS CENÁRIOS </p> </div>
                 <div class="cenarios_img">
-                    <div class="img1_cenario"></div>
-                    <div class="img2_cenario"></div>
+                    <div class="img1_cenario"><button onclick="full_img()"><img src="../assets/icons/icon_maximize.png"></button></div>
+                    <div class="fullimg1" id="fullimg"><button onclick="close_img()"><img src="../assets/icons/icon_minimize.png"></button></div>
+                    <div class="img2_cenario"><button onclick="full_img2()"><img src="../assets/icons/icon_maximize.png"></button></div>
+                    <div class="fullimg2" id="fullimg2"><button onclick="close_img2()"><img src="../assets/icons/icon_minimize.png"></button></div>
                 </div>
             </div>
             <div class="img_content3"></div>
@@ -238,6 +240,27 @@
 
         inicio_content.style.display = "none"
 
+    }
+
+    function full_img(){
+
+        fullimg.style.display = "block"
+    }
+
+    function close_img(){
+
+        fullimg.style.display = "none"
+    }
+
+
+    function full_img2(){
+
+    fullimg2.style.display = "block"
+    }
+
+    function close_img2(){
+
+    fullimg2.style.display = "none"
     }
 
 

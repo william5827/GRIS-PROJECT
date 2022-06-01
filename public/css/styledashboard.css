@@ -188,3 +188,62 @@ body::-webkit-scrollbar-thumb{
     background-size: cover;
     background-position: bottom;
 }
+
+.content_soundtrack{
+    width: 60%;
+    height: 100%;
+}
+
+.close_soundtrack{
+    height: 60px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close_soundtrack button{
+    border: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.close_soundtrack img{
+    width: 45px;
+    height: 45px;
+}
+
+.title_soundtrack{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_soundtrack{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title_soundtrack p{
+    margin: 0;
+    font-size: 35px;
+    color: #ff5b76;
+}
+
+.text_soundtrack p{
+    margin: 0;
+    font-size: 28px;
+}
+
+.b_gris{
+    color: #ff5b76;
+}
