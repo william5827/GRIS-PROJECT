@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="../assets/icons/gris_icon_2.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/styledashboard.css">
+    <link rel="stylesheet" href="../css/stylegaleria.css">
     <script src="../js/funcoes.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRIS | DASHBOARD</title>
+    <title>GRIS | GALERIA</title>
 </head>
 <body onload="validarSessao()">
     
@@ -24,9 +24,9 @@
         <ul class="navbar">
             <li><a href="inicio.html"><img class="icons_navbar" src="../assets/icons/icon_home2.png"></a></li>
             <li ><a class="a_navbar" href="soundtrack.html"> <img class="icons_navbar" src="../assets/icons/icon_soundtrack.png"></a></li>
-            <li ><a class="a_navbar" href="mural.html"> <img class="icons_navbar" src="../assets/icons/icon_mural.png"></a></li>
-            <li><a href="galeria.html" class="a_navbar"><img class="icons_navbar" src="../assets/icons/icon_galeria2.png"></a></li>
-            <li class="agora"><a class="a_navbar" href="dashboard.html"> <img class="icons_navbar" src="../assets/icons/icon_dashboard_2.png"></a></li>
+            <li><a class="a_navbar" href="mural.html"> <img class="icons_navbar" src="../assets/icons/icon_mural.png"></a></li>
+            <li class="agora"><a href="galeria.html" class="a_navbar"><img class="icons_navbar" src="../assets/icons/icon_galeria.png"></a></li>
+            <li><a class="a_navbar" href="dashboard.html"> <img class="icons_navbar" src="../assets/icons/icon_dashboard.png"></a></li>
         </ul>
         <div class="help_logout">
             <button onclick="limparSessao()"><img class="icon_logout_navbar" src="../assets/icons/icon_logout.png"></button>
@@ -47,33 +47,25 @@
                 </div>
 
                 <div class="help_soundtrack" id="help_soundtrack">
-                        <div class="img_help"></div>
-                        <div class="content_soundtrack">
-                            <div class="title_soundtrack"><p>DASHBOARD</p></div>
-                            <div class="text_soundtrack"><p>A dashboard é onde você
-                                poderá ver a quantidade de posts que você fez e quantas fotos salvou, ambas separadas
-                                detalhadamente em gráficos.
-                            </p></div>
-                        </div>
-                    <div class="close_soundtrack">
-                            <button onclick="fechar_help()"><img src="../assets/icons/icon_fechar.png"></button>
+                    
+                    <div class="img_help"></div>
+
+                    <div class="content_soundtrack">
+                        <div class="title_soundtrack"><p>GALERIA</p></div>
+                        <div class="text_soundtrack"><p> A galeria é o seu própio universo,
+                            onde você pode guardar imagens de jogos, personagens ou uma 
+                            recordação pessoal. Adicione-as aqui e guarde suas melhores
+                            lembranças.
+                        </p></div>
                     </div>
-                        
+    
+                    <div class="close_soundtrack">
+                        <button onclick="fechar_help()"><img src="../assets/icons/icon_fechar.png"></button>
+                </div>
+     
                 </div>
 
             <!--</div>-->
-
-            <div class="content_dashboard">
-
-                <div class="container">
-
-                    <div class="card_fotos"></div>
-
-                    <div class="card_posts"></div>
-
-                </div>
-
-            </div>
 
         </div>
 

@@ -10,7 +10,7 @@ function validarSessao() {
     console.log('entrei na func')
 
     if (email != null && nome != null) {
-       window.alert(`Seja bem-vindo, ${nome}!`);
+       //window.alert(`Seja bem-vindo, ${nome}!`);
         if (h1LoginUsuario != undefined) {
             h1LoginUsuario.innerHTML = email;
         }

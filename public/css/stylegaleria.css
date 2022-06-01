@@ -1,0 +1,251 @@
+html {
+    min-height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to right ,#ffc0cb, #ff5b76);
+}
+
+.header {
+    background-image: linear-gradient(to right, pink, rgb(255, 91, 118));
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+.agora{
+    border: 2px solid white;
+    background-color: white;
+    transition: 1.5s;
+    border-radius: 3px;
+    padding-bottom: 1px;
+    padding-top: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.title_user{
+    float: left;
+    display: flex;
+    width: 155px;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_user p{
+    margin: 0;
+    font-size: 17px;
+}
+
+.help_logout{
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+}
+
+.help_logout button{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.img_navbar{
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    background-image: url(../assets/img/bg_gris_content3.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 60%;
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    width: 400px;
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.a_navbar{
+    color: white;
+    text-decoration: none;
+}
+
+.icons_navbar{
+    width: 20px;
+    height: 20px;
+}
+
+.icon_logout_navbar{
+    width: 25px;
+    height: 25px;
+    padding-top: 3px;
+}
+
+body::-webkit-scrollbar{
+    width: 12px;
+    background-color:rgb(255, 91, 118);
+}
+
+body::-webkit-scrollbar-thumb{
+    border: 3px solid rgb(255, 91, 118);
+    background-color: pink;
+    border-radius: 5px;
+}
+
+/*CSS NAVBAR  ↑*/
+
+.contentbody{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bgwhite{
+    margin-top: 10%;
+    width: 90%;
+    height: 600px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bgwhite .container{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.icon_help_navbar{
+    width: 25px;
+    height: 25px;
+}
+
+.cliq_here{
+    width: 300px;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cliq_here button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.cliq_here p{
+    float: left;
+    margin: 0;
+    color: #ff5b76;
+    font-size: 20px;
+}
+
+
+.help_soundtrack{
+    width: 80%;
+    height: 300px;
+    margin-top: 15px;
+    display: none;
+    box-shadow: 0 4px 45px 0 rgb(0, 0, 0, 0.2);
+}
+
+.img_help{
+    width: 28%;
+    height: 100%;
+    background-image: url(../assets/img/bg_gris_content1.png);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.content_soundtrack{
+    width: 65%;
+    height: 100%;
+}
+
+.close_soundtrack{
+    height: 60px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close_soundtrack button{
+    border: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.close_soundtrack img{
+    width: 45px;
+    height: 45px;
+}
+
+.title_soundtrack{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_soundtrack{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title_soundtrack p{
+    margin: 0;
+    font-size: 35px;
+    color: #ff5b76;
+}
+
+.text_soundtrack p{
+    margin: 0;
+    font-size: 26px;
+}
+
+.b_gris{
+    color: #ff5b76;
+}

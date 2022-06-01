@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRIS | INICIO</title>
 </head>
-<body>
+<body onload="validarSessao()">
     
     <div class="header">
 
@@ -26,10 +26,11 @@
             <li class="agora"> <img class="icons_navbar" src="../assets/icons/icon_home.png"></li>
             <li><a class="a_navbar" href="soundtrack.html"> <img class="icons_navbar" src="../assets/icons/icon_soundtrack.png"></a></li>
             <li><a class="a_navbar" href="mural.html"> <img class="icons_navbar" src="../assets/icons/icon_mural.png"></a></li>
+            <li><a href="galeria.html" class="a_navbar"><img class="icons_navbar" src="../assets/icons/icon_galeria2.png"></a></li>
             <li><a class="a_navbar" href="dashboard.html"> <img class="icons_navbar" src="../assets/icons/icon_dashboard.png"></a></li>
-        </ul>
+       </ul>
         <div class="help_logout">
-            <button><a href="../index.html"><img class="icon_logout_navbar" src="../assets/icons/icon_logout.png"></a></button>
+            <button onclick="limparSessao()"><img class="icon_logout_navbar" src="../assets/icons/icon_logout.png"></button>
         </div>
         </div>
 
