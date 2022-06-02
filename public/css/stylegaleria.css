@@ -126,9 +126,9 @@ body::-webkit-scrollbar-thumb{
 }
 
 .bgwhite{
-    margin-top: 10%;
+    margin-top: 5%;
     width: 90%;
-    height: 600px;
+    height: 550px;
     background-color: white;
     border-radius: 5px;
     display: flex;
@@ -243,7 +243,7 @@ body::-webkit-scrollbar-thumb{
 
 .text_soundtrack p{
     margin: 0;
-    font-size: 26px;
+    font-size: 27px;
 }
 
 .b_gris{

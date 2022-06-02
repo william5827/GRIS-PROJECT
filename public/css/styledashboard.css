@@ -126,9 +126,9 @@ body::-webkit-scrollbar-thumb{
 }
 
 .bgwhite{
-    margin-top: 10%;
+    margin-top: 5%;
     width: 90%;
-    height: 600px;
+    height: 550px;
     background-color: white;
     border-radius: 5px;
     display: flex;
@@ -176,6 +176,7 @@ body::-webkit-scrollbar-thumb{
 .help_soundtrack{
     width: 80%;
     height: 300px;
+    background-color: white;
     margin-top: 15px;
     display: none;
     box-shadow: 0 4px 45px 0 rgb(0, 0, 0, 0.2);
@@ -241,9 +242,102 @@ body::-webkit-scrollbar-thumb{
 
 .text_soundtrack p{
     margin: 0;
-    font-size: 28px;
+    font-size: 27px;
 }
 
 .b_gris{
     color: #ff5b76;
+}
+
+.content_dashboard{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.content_dashboard .container{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.card_fotos{
+    width: 30%;
+    height: 200px;
+    background-color: #ff5b76;
+    border-radius: 3px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 45px 0 rgb(0, 0, 0, 0.2);
+}
+
+.title_card_foto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_card_foto p{
+    margin: 0;
+    font-size: 35px;
+}
+
+.qtn_foto{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.qtn_foto b{
+    margin: 0;
+    font-size: 35px;
+}
+
+.card_posts{
+    width: 30%;
+    height: 200px;
+    background-color: #ff5b76;
+    border-radius: 3px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 45px 0 rgb(0, 0, 0, 0.2);
+}
+
+.title_card_posts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_card_posts p{
+    margin: 0;
+    font-size: 35px;
+}
+
+
+.qtn_posts{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.qtn_posts b{
+    margin: 0;
+    font-size: 35px;
 }

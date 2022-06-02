@@ -126,9 +126,9 @@ body::-webkit-scrollbar-thumb{
 }
 
 .bgwhite{
-    margin-top: 10%;
+    margin-top: 5%;
     width: 90%;
-    height: 600px;
+    height: 550px;
     background-color: white;
     border-radius: 5px;
     display: flex;
