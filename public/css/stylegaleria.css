@@ -45,7 +45,7 @@ body{
     display: flex;
     width: 155px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .title_user p{
@@ -177,6 +177,9 @@ body::-webkit-scrollbar-thumb{
     width: 80%;
     height: 300px;
     margin-top: 15px;
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
     display: none;
     box-shadow: 0 4px 45px 0 rgb(0, 0, 0, 0.2);
 }

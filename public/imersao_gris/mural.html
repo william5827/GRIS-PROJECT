@@ -19,7 +19,6 @@
 
             <div class="title_user">
             <div class="img_navbar"> </div>
-            <p>Olá, <b><span id="b_usuario">usuario</span></b></p>
             </div>
 
         <ul class="navbar">
@@ -110,7 +109,7 @@
     <script>
 
         var nome_user = sessionStorage.NOME_USUARIO;
-        b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+        b_usuario = sessionStorage.NOME_USUARIO;
 
         function help(){
     
@@ -211,7 +210,7 @@
                 if (resposta.status == 204) {
                     var feed = document.getElementById("feed_container");
                     var mensagem = document.createElement("span");
-                    mensagem.innerHTML = "<p class='no_post'>Você ainda não fez nenhum post.<p>"
+                    mensagem.innerHTML = ` <span class='b_like'><p>Você ainda não fez nenhum post,</p><b class='b_usuario'>${nome_user}</b></span>`
                     feed.appendChild(mensagem);
                     throw "Nenhum resultado encontrado!!";
                 }

@@ -43,9 +43,9 @@ body{
 .title_user{
     float: left;
     display: flex;
-    width: 155px;
+    width: 175px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .title_user p{
@@ -134,7 +134,22 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow-y: scroll;
 }
+
+.bgwhite::-webkit-scrollbar{
+    width: 12px;
+    background-color:rgb(255, 91, 118);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.bgwhite::-webkit-scrollbar-thumb{
+    border: 3px solid rgb(255, 91, 118);
+    background-color: pink;
+    border-radius: 5px;
+}
+
 
 .bgwhite .container{
     display: flex;
@@ -177,7 +192,10 @@ body::-webkit-scrollbar-thumb{
     width: 80%;
     height: 300px;
     margin-top: 15px;
+    border-radius: 3px;
+    position: absolute;
     display: none;
+    background-color: white;
     box-shadow: 0 4px 45px 0 rgb(0, 0, 0, 0.2);
 }
 
@@ -195,7 +213,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .close_soundtrack{
-    height: 60px;
+    height: 55px;
     width: 10%;
     display: flex;
     justify-content: center;
@@ -246,4 +264,72 @@ body::-webkit-scrollbar-thumb{
 
 .b_gris{
     color: #ff5b76;
+}
+
+.cards_soundtrack{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.bg_card{
+    width: 300px;
+    height: 350px;
+    border-radius: 3px;
+    box-shadow: 0 4px 45px 0 rgb(0, 0, 0, 0.2);
+    margin-left: 6%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    float: left;
+    background-image: url(../assets/img/gris_logo.jpeg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 85%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    box-shadow: 0 4px 45px 0 rgb(0, 0, 0, 0.2);
+    border-radius: 3px;
+    opacity: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card h2{
+    color: #ff5b76;
+    margin: 0;
+    text-align: center;
+    font-weight: 200px;
+}
+
+.card audio{
+    margin-top: 20px;
+    width: 85%;
+}
+
+.b_like{
+    margin-top: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.b_like p{
+    margin: 0;
+    font-size: 45px;
+    color: #ff5b76;
+}
+
+#b_usuario{
+    color: #ff5b76;
+    font-size: 45px;
+    margin-left: 10px;
 }
