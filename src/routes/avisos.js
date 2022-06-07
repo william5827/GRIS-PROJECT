@@ -31,4 +31,9 @@ router.delete("/deletar/:idAviso", function (req, res) {
     avisoController.deletar(req, res);
 });
 
+router.get("/contar", function (req,res){
+    avisoController.imagensfunc(req,res);
+});
+
+
 module.exports = router;

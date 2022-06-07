@@ -131,6 +131,22 @@ function deletar(req, res) {
         );
 }
 
+function imagensfunc(req, res) {
+    
+    avisoModel.imagensfunc().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar imagens: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
 module.exports = {
     testar,
     listar,
@@ -138,5 +154,6 @@ module.exports = {
     pesquisarDescricao,
     publicar,
     editar,
-    deletar
+    deletar,
+    imagensfunc
 }

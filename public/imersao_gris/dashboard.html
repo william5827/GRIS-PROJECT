@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRIS | DASHBOARD</title>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 </head>
 <body onload="validarSessao()">
     
@@ -19,13 +20,14 @@
 
             <div class="title_user">
             <div class="img_navbar"> </div>
+            <p><b><span id="b_usuario">usuario</span></b></p>
             </div>
 
         <ul class="navbar">
             <li><a href="inicio.html"><img class="icons_navbar" src="../assets/icons/icon_home2.png"></a></li>
             <li ><a class="a_navbar" href="soundtrack.html"> <img class="icons_navbar" src="../assets/icons/icon_soundtrack.png"></a></li>
             <li ><a class="a_navbar" href="mural.html"> <img class="icons_navbar" src="../assets/icons/icon_mural.png"></a></li>
-            <li><a href="galeria.html" class="a_navbar"><img class="icons_navbar" src="../assets/icons/icon_galeria2.png"></a></li>
+            <!--<li><a href="galeria.html" class="a_navbar"><img class="icons_navbar" src="../assets/icons/icon_galeria2.png"></a></li>-->
             <li class="agora"><a class="a_navbar" href="dashboard.html"> <img class="icons_navbar" src="../assets/icons/icon_dashboard_2.png"></a></li>
         </ul>
         <div class="help_logout">
@@ -51,8 +53,8 @@
                         <div class="content_soundtrack">
                             <div class="title_soundtrack"><p>DASHBOARD</p></div>
                             <div class="text_soundtrack"><p>A dashboard é onde você
-                                poderá ver a quantidade de posts que você fez e quantas fotos salvou, ambas separadas
-                                detalhadamente em gráficos.
+                                poderá ver a quantidade de posts que você fez, separado
+                                detalhadamente em um grafico.
                             </p></div>
                         </div>
                     <div class="close_soundtrack">
@@ -67,18 +69,24 @@
 
                 <div class="container">
 
-                    <div class="card_fotos">
+                    <!--<div class="card_fotos">
                         <div class="title_card_foto"><p>Fotos</p>
-                        <div class="qtn_foto"><b>0</b></div>
+                        <div class="qtn_foto"><img onclick="abrir_dash_fotos()" src="../assets/icons/icon_more_dashboard.png"><b>0</b></div>
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="card_posts">
                         <div class="title_card_posts"><p>Posts</p>
-                            <div class="qtn_posts"><b>0</b></div>
+                            <div class="qtn_posts"><img onclick="obterDadosGrafico(1),abrir_dash_posts()" src="../assets/icons/icon_more_dashboard.png"><b>0</b></div>
                         </div>
                     </div>
 
+                </div>
+
+                <div class="grafico_foto" id="grafico_foto"></div>
+                <div class="grafico_post" id="grafico_post">
+                    <canvas id="canvas_grafico"></canvas>
+                    <button onclick="fechar_dash_posts()"><img src="../assets/icons/icon_fechar.png"></button>
                 </div>
 
             </div>
@@ -93,7 +101,25 @@
 
     <script>
 
-        //b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+        b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+        //function abrir_dash_fotos(){
+
+          //  grafico_foto.style.display = "flex"
+
+        //}
+
+        function abrir_dash_posts(){
+
+            grafico_post.style.display = "flex"
+
+        }
+
+        function fechar_dash_posts(){
+
+        grafico_post.style.display = "none"
+
+        }
 
         function help(){
     
@@ -106,7 +132,94 @@
             help_soundtrack.style.display = "none"
     
         }
+
+
+    window.onload = obterDadosGrafico(1);
     
-    
+
+    function obterDadosGrafico(idAquario) {
+       // alterarTitulo(idAquario)
+
+       // if (proximaAtualizacao != undefined) {
+         //   clearTimeout(proximaAtualizacao);
+        //}
+
+        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico(resposta, idAquario);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function plotarGrafico(resposta, idAquario) {
+        console.log('iniciando plotagem do gráfico...');
+
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    yAxisID: 'y-umidade',
+                    label: 'Quantidade de posts feitos',
+                    borderColor: '#ff5b76',
+                    backgroundColor: '#ff5b76',
+                    fill: true,
+                    data: []
+                }
+            ]
+        };
+
+        dados.labels.push('Contagem de posts');
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.datasets[0].data.push(registro.qtdposts);
+        }
+
+        console.log(JSON.stringify(dados));
+
+        var ctx = canvas_grafico.getContext('2d');
+        window.grafico_linha = Chart.Bar(ctx, {
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 500 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: false,
+                    text: 'Dados capturados'
+                },
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-umidade',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 10,
+                            min: 0
+                        },
+
+                        gridLines: {
+                            drawOnChartArea: true,
+                        },
+                    }],
+                }
+            }
+        });
+
+        //setTimeout(() => atualizarGrafico(dados), 2000);
+    }
     
     </script>

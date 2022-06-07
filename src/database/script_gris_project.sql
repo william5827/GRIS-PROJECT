@@ -18,3 +18,11 @@ CREATE TABLE aviso (
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
+
+CREATE TABLE imagem(
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ url VARCHAR(5000),
+ data_imagem DATETIME DEFAULT CURRENT_TIMESTAMP,
+ fk_usuario INT,
+ FOREIGN KEY(fk_usuario) REFERENCES usuario(id)
+);

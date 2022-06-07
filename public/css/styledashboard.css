@@ -252,6 +252,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .content_dashboard{
+    margin-top: 110px;
     width: 100%;
     height: 250px;
     display: flex;
@@ -293,15 +294,16 @@ body::-webkit-scrollbar-thumb{
 }
 
 .qtn_foto{
-    width: 30%;
+    margin-top: 10px;
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid white;
 }
 
 .qtn_foto b{
-    margin: 0;
+    margin-left: 43px;
     font-size: 35px;
 }
 
@@ -332,14 +334,68 @@ body::-webkit-scrollbar-thumb{
 
 
 .qtn_posts{
-    width: 30%;
+    margin-top: 10px;
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid white;
 }
 
 .qtn_posts b{
-    margin: 0;
+    margin-left: 45px;
     font-size: 35px;
+}
+
+.qtn_posts img{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.qtn_foto img{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.grafico_foto{
+    margin-right: 35%;
+    width: 600px;
+    height: 300px;
+    border-radius: 3px;
+    box-shadow: 0 4px 45px 0 rgb(0, 0, 0, 0.2);
+    display: none;
+    background-color: white;
+    position: absolute;
+    border: 2px solid #ff5b76;
+}
+
+
+.grafico_post{
+    margin-left: 0%;
+    width: 600px;
+    height: 300px;
+    border-radius: 3px;
+    box-shadow: 0 4px 45px 0 rgb(0, 0, 0, 0.2);
+    display: none;
+    background-color: white;
+    position: absolute;
+    border: 2px solid #ff5b76;
+}
+
+.grafico_post button{
+    border: 0;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.grafico_post button img{
+    width: 30px;
+    height: 30px;
 }
