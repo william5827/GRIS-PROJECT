@@ -335,7 +335,7 @@ body::-webkit-scrollbar-thumb{
 
 .qtn_posts{
     margin-top: 10px;
-    width: 50%;
+    width: 90%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -343,8 +343,8 @@ body::-webkit-scrollbar-thumb{
 }
 
 .qtn_posts b{
-    margin-left: 45px;
-    font-size: 35px;
+    margin-left: 40px;
+    font-size: 33px;
 }
 
 .qtn_posts img{

@@ -230,7 +230,7 @@
                         var spanNome = document.createElement("span");
                         var divDescricao = document.createElement("div");
                         var divButtons = document.createElement("div");
-                        var btnEditar = document.createElement("button");
+                        //var btnEditar = document.createElement("button");
                         var btnDeletar = document.createElement("button");
 
 
@@ -238,7 +238,6 @@
                         spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
-                        btnEditar.innerHTML =   `<img class="icon_edit" src="../assets/icons/icon_edit.png">`;
                         btnDeletar.innerHTML = `<img class="icon_delete" src="../assets/icons/icon_delete.png">`;
 
                         divPublicacao.className = "publicacao";
@@ -249,9 +248,9 @@
 
                         divButtons.className = "div-buttons"
 
-                        btnEditar.className = "publicacao-btn-editar"
-                        btnEditar.id = "btnEditar" + publicacao.idAviso;
-                        btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
+                        //btnEditar.className = "publicacao-btn-editar"
+                        //btnEditar.id = "btnEditar" + publicacao.idAviso;
+                        //btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
 
                         btnDeletar.className = "publicacao-btn-editar"
                         btnDeletar.id = "btnDeletar" + publicacao.idAviso;
@@ -262,7 +261,7 @@
                         divPublicacao.appendChild(spanTitulo);
                         divPublicacao.appendChild(divDescricao);
                         divPublicacao.appendChild(divButtons);
-                        divButtons.appendChild(btnEditar);
+                        //divButtons.appendChild(btnEditar);
                         divButtons.appendChild(btnDeletar);
                         feed.appendChild(divPublicacao);
                     }

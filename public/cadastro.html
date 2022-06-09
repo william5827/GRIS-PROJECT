@@ -38,7 +38,7 @@
                     <label>Email</label>
                     </div>
                
-                <input class="input_login" id="email_input" placeholder="Digite seu Email">
+                <input class="input_login" id="email_input" placeholder="Digite seu Email" onkeyup="validarEmail()">
                 <span class="validacao" id="valid_email"></span>
 
                 <div class="icons_posic">
@@ -94,6 +94,20 @@
         } 
 
     }
+
+    function validarEmail() {
+      var email = email_input.value 
+
+      if (email.length > 10 && email.length < 80 && email.indexOf("@") > 2 && email.indexOf(".com") > 3){
+
+        valid_email.innerHTML = `<span style='color: green;'> Email válido </span>`
+
+      } else {
+
+          valid_email.innerHTML = `<span style='color: red;'> Email Inválido (Necessita de "@" e ".com" no email) </span>`
+
+      }
+  }
 
     function validar_senha(){
 
