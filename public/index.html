@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
     <title>GRIS | LOGIN</title>
 </head>
+
 <body>
 
     <div id="body_img" class="body_img"></div>
-    
+
     <div class="menu">
         <div class="menu_content">
 
@@ -28,18 +30,18 @@
                 <div class="icons_posic">
                     <img class="icon_login" src="assets/icons/icon_email.png">
                     <label>Email</label>
-                    </div>
-               
-            <input class="input_login" id="email_input" type="email" placeholder="Digite seu Email">
-                
-                <div class="icons_posic">
-                <img class="icon_login"  src="assets/icons/icon_password.png">
-                <label>Senha</label>
                 </div>
 
-            <input class="input_login" id="senha_input" type="password" placeholder="Digite sua Senha">
+                <input class="input_login" id="email_input" type="email" placeholder="Digite seu Email">
 
-                    <p class="cadastro_p">Não tem login? <a href="cadastro.html">cadastre-se já!</a></p>
+                <div class="icons_posic">
+                    <img class="icon_login" src="assets/icons/icon_password.png">
+                    <label>Senha</label>
+                </div>
+
+                <input class="input_login" id="senha_input" type="password" placeholder="Digite sua Senha">
+
+                <p class="cadastro_p">Não tem login? <a href="cadastro.html">cadastre-se já!</a></p>
 
                 <button type="button" class="button_login" onclick="entrar()">ENTRAR</button>
 
@@ -58,12 +60,13 @@
     </div>
 
 </body>
+
 </html>
 
 <script>
 
 
-    function entrar(){
+    function entrar() {
         //aguardar();
 
         var emailVar = email_input.value;
@@ -72,7 +75,7 @@
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = '<img class="icon_status" src="assets/icons/icon_error.png"> Preencha todos os campos';
-            
+
             //finalizarAguardar();
             setInterval(sumirMensagem, 3000)
             return false;
